@@ -17,12 +17,14 @@ This project includes SQL queries used to explore and analyze hospital data in S
 ## Sample Queries
 
 ### 1. Doctors with more than 5 years of experience
-``
-SELECT first_name || ' ' || last_name AS Name, specialization, years_experience  
+
+SELECT first_name || ' ' || last_name AS Name,
+       specialization,
+       years_experience  
 FROM doctors
 WHERE years_experience > 5
-ORDER BY years_experience DESC; 
-``
+ORDER BY years_experience DESC;
+
 ### 2. Revenue per doctor (VIEW)
 ```
 CREATE VIEW doctor_kpis AS
